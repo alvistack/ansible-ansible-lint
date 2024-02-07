@@ -2,11 +2,12 @@
 
 [project]
 name = "ansible-lint"
+version = "25.11.0"
 description = "Checks playbooks for practices and behavior that could potentially be improved"
 readme = "README.md"
 # https://peps.python.org/pep-0621/#readme
 requires-python = ">=3.10"
-license = "GPL-3.0-or-later"
+license = {"text" = "GPL-3.0-or-later"}
 authors = [{ "name" = "Will Thames", "email" = "will@thames.id.au" }]
 maintainers = [{ "name" = "Ansible by Red Hat", "email" = "info@ansible.com" }]
 keywords = ["ansible", "lint"]
@@ -53,7 +54,6 @@ dependencies = [
   "wcmatch>=8.5.0 ; python_version >= '3.12'",
   "yamllint>=1.34.0",
 ]
-dynamic = ["version"]
 
 [project.urls]
 changelog = "https://github.com/ansible/ansible-lint/releases"
@@ -116,7 +116,6 @@ schemas = ["check-jsonschema>=0.26.3"]
 
 [build-system]
 requires = [
-  "setuptools_scm[toml] >= 7.0.5",  # required for "no-local-version" scheme
   "setuptools >= 65.3.0",
 ]
 build-backend = "setuptools.build_meta"
@@ -595,21 +594,6 @@ max-complexity = 20
 
 [tool.ruff.lint.pydocstyle]
 convention = "google"
-
-[tool.setuptools_scm]
-# To prevent accidental pick of mobile version tags such 'v6'
-git_describe_command = [
-  "git",
-  "describe",
-  "--dirty",
-  "--long",
-  "--tags",
-  "--match",
-  "v*.*",
-]
-local_scheme = "no-local-version"
-tag_regex = "^(?P<prefix>v)?(?P<version>\\d+[^\\+]*)(?P<suffix>.*)?$"
-version_file = "src/ansiblelint/_version.py"
 
 [tool.tomlsort]
 in_place = true
