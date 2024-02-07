@@ -1,0 +1,4 @@
+ansible-lint: copyright-without-copyright-notice
+ansible-lint: initial-upload-closes-no-bugs
+ansible-lint: no-manual-page
+ansible-lint: zero-byte-file-in-doc-directory
