@@ -1,0 +1,5 @@
+python-ansible-lint (100:25.12.2-1) UNRELEASED; urgency=medium
+
+  * https://github.com/ansible/ansible-lint/releases/tag/v25.12.2
+
+ -- Wong Hoi Sing Edison <hswong3i@pantarei-design.com>  Tue, 23 Dec 2025 21:59:18 +0800
